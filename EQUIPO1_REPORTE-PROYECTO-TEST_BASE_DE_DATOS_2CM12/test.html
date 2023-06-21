@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test de inteligencia emocional</title>
+
+	<style type="text/css">
+			.container{
+				width: 60%;
+				margin: 0 auto;
+			
+			}
+			h1 {
+				text-align: center;
+			}
+
+			input[type="checkbox"] {
+				opacity: 0;
+			}
+
+			input[type="checkbox"]:checked + label{
+				color: white;
+				background-color: black;
+			}
+			.label{
+				display: block;
+				text-align: center;
+				width: 30px;
+				margin-top: -19px;
+			}
+
+
+	</style>
+
+	<script>
+		function deseleccionarCheckbox(nombreGrupo, valorCheckbox) {
+			var checkboxes = document.getElementsByName(nombreGrupo);
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].value != valorCheckbox) {
+					checkboxes[i].checked = false;
+				}
+			}
+		}
+
+
+		//RESULTADOS
+
+		
+		
+		function calcularSuma() {
+			var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+			if (checkboxes.length !== 24) {
+				document.getElementById('resultado').innerHTML = "TODAS LAS AFIRMACIONES DEBEN ESTAR CONTESTADAS, COMPLETA LAS FALTANTES POR FAVOR";
+				return;
+			}
+
+			var suma = 0;
+			for (var i = 0; i < 8; i++) {
+				suma += parseInt(checkboxes[i].value);
+			}
+			document.getElementById('resultado').innerHTML = "TU RESULTADO DE INTELIGENCIA EMOCIONAL ES DE : <br>" + suma +" PUNTOS";
+			document.getElementById('suma_input').value = suma;
+
+
+			suma=0
+			for (var i = 8; i < 16; i++) {
+				suma += parseInt(checkboxes[i].value);
+			}
+			document.getElementById('resultado2').innerHTML = "TU RESULTADO DE CLARIDAD EMOCIONAL ES DE : <br>" + suma +" PUNTOS";
+			document.getElementById('suma_input2').value = suma;
+
+			suma=0
+			for (var i = 16; i < 24; i++) {
+				suma += parseInt(checkboxes[i].value);
+			}
+			document.getElementById('resultado3').innerHTML = "TU RESULTADO DE REPARACION DE EMOCIONES ES DE : <br>" + suma +" PUNTOS";
+			document.getElementById('suma_input3').value = suma;
+      }
+
+
+	</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Test de inteligencia emocional</h1>
+    
+    <p>No hay respuestas correctas o incorrectas, marca la que más se aproxime a tus preferencias y ¡no emplees demasiado tiempo en cada uno de ellas¡</p>
+	
+	<form method="POST" action="base_test.php">
+
+		<label for="persona">DATOS PERSONALES:</label>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+			<input type="text" name="sexo" placeholder="Sexo">
+            <input type="number" name="edad" placeholder="Edad"><br>
+			
+			<br>
+			<br>
+			<br>
+
+		<!-- <div style="text-align:center;"> -->
+		<table border="1" style="margin: 0 auto;">
+			<thead>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>1.</td>
+					<td>Presto mucha atención a los sentimientos.</td>
+					<td><input type="checkbox" id="num1_1" name="numero1" value="1" onclick="deseleccionarCheckbox('numero1', 1)"><label class="label" for="num1_1">1</label></td>
+					<td><input type="checkbox" id="num1_2" name="numero1" value="2" onclick="deseleccionarCheckbox('numero1', 2)"><label class="label" for="num1_2">2</label></td>
+					<td><input type="checkbox" id="num1_3" name="numero1" value="3" onclick="deseleccionarCheckbox('numero1', 3)"><label class="label" for="num1_3">3</label></td>
+					<td><input type="checkbox" id="num1_4" name="numero1" value="4" onclick="deseleccionarCheckbox('numero1', 4)"><label class="label" for="num1_4">4</label></td>
+					<td><input type="checkbox" id="num1_5" name="numero1" value="5" onclick="deseleccionarCheckbox('numero1', 5)"><label class="label" for="num1_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>2.</td>
+					<td>Normalmente me preocupo por lo que siento.</td>
+					<td><input type="checkbox" id="num2_1" name="numero2" value="1" onclick="deseleccionarCheckbox('numero2', 1)"><label class="label" for="num2_1">1</label></td>
+					<td><input type="checkbox" id="num2_2" name="numero2" value="2" onclick="deseleccionarCheckbox('numero2', 2)"><label class="label" for="num2_2">2</label></td>
+					<td><input type="checkbox" id="num2_3" name="numero2" value="3" onclick="deseleccionarCheckbox('numero2', 3)"><label class="label" for="num2_3">3</label></td>
+					<td><input type="checkbox" id="num2_4" name="numero2" value="4" onclick="deseleccionarCheckbox('numero2', 4)"><label class="label" for="num2_4">4</label></td>
+					<td><input type="checkbox" id="num2_5" name="numero2" value="5" onclick="deseleccionarCheckbox('numero2', 5)"><label class="label" for="num2_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>3.</td>
+					<td>Normalmente dedico tiempo a pensar en mis emociones.</td>
+					<td><input type="checkbox" id="num3_1" name="numero3" value="1" onclick="deseleccionarCheckbox('numero3', 1)"><label class="label" for="num3_1">1</label></td>
+					<td><input type="checkbox" id="num3_2" name="numero3" value="2" onclick="deseleccionarCheckbox('numero3', 2)"><label class="label" for="num3_2">2</label></td>
+					<td><input type="checkbox" id="num3_3" name="numero3" value="3" onclick="deseleccionarCheckbox('numero3', 3)"><label class="label" for="num3_3">3</label></td>
+					<td><input type="checkbox" id="num3_4" name="numero3" value="4" onclick="deseleccionarCheckbox('numero3', 4)"><label class="label" for="num3_4">4</label></td>
+					<td><input type="checkbox" id="num3_5" name="numero3" value="5" onclick="deseleccionarCheckbox('numero3', 5)"><label class="label" for="num3_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>4.</td>
+					<td>Pienso que merece la pena prestar atención a mis emociones.</td>
+					<td><input type="checkbox" id="num4_1" name="numero4" value="1" onclick="deseleccionarCheckbox('numero4', 1)"><label class="label" for="num4_1">1</label></td>
+					<td><input type="checkbox" id="num4_2" name="numero4" value="2" onclick="deseleccionarCheckbox('numero4', 2)"><label class="label" for="num4_2">2</label></td>
+					<td><input type="checkbox" id="num4_3" name="numero4" value="3" onclick="deseleccionarCheckbox('numero4', 3)"><label class="label" for="num4_3">3</label></td>
+					<td><input type="checkbox" id="num4_4" name="numero4" value="4" onclick="deseleccionarCheckbox('numero4', 4)"><label class="label" for="num4_4">4</label></td>
+					<td><input type="checkbox" id="num4_5" name="numero4" value="5" onclick="deseleccionarCheckbox('numero4', 5)"><label class="label" for="num4_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>5.</td>
+					<td>Dejo que mis sentimientos afecten a mis pensamientos.</td>
+					<td><input type="checkbox" id="num5_1" name="numero5" value="1" onclick="deseleccionarCheckbox('numero5', 1)"><label class="label" for="num5_1">1</label></td>
+					<td><input type="checkbox" id="num5_2" name="numero5" value="2" onclick="deseleccionarCheckbox('numero5', 2)"><label class="label" for="num5_2">2</label></td>
+					<td><input type="checkbox" id="num5_3" name="numero5" value="3" onclick="deseleccionarCheckbox('numero5', 3)"><label class="label" for="num5_3">3</label></td>
+					<td><input type="checkbox" id="num5_4" name="numero5" value="4" onclick="deseleccionarCheckbox('numero5', 4)"><label class="label" for="num5_4">4</label></td>
+					<td><input type="checkbox" id="num5_5" name="numero5" value="5" onclick="deseleccionarCheckbox('numero5', 5)"><label class="label" for="num5_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>6.</td>
+					<td>Pienso en mi estado de ánimo constantemente.</td>
+					<td><input type="checkbox" id="num6_1" name="numero6" value="1" onclick="deseleccionarCheckbox('numero6', 1)"><label class="label" for="num6_1">1</label></td>
+					<td><input type="checkbox" id="num6_2" name="numero6" value="2" onclick="deseleccionarCheckbox('numero6', 2)"><label class="label" for="num6_2">2</label></td>
+					<td><input type="checkbox" id="num6_3" name="numero6" value="3" onclick="deseleccionarCheckbox('numero6', 3)"><label class="label" for="num6_3">3</label></td>
+					<td><input type="checkbox" id="num6_4" name="numero6" value="4" onclick="deseleccionarCheckbox('numero6', 4)"><label class="label" for="num6_4">4</label></td>
+					<td><input type="checkbox" id="num6_5" name="numero6" value="5" onclick="deseleccionarCheckbox('numero6', 5)"><label class="label" for="num6_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>7.</td>
+					<td>A menudo pienso en mis sentimientos.</td>
+					<td><input type="checkbox" id="num7_1" name="numero7" value="1" onclick="deseleccionarCheckbox('numero7', 1)"><label class="label" for="num7_1">1</label></td>
+					<td><input type="checkbox" id="num7_2" name="numero7" value="2" onclick="deseleccionarCheckbox('numero7', 2)"><label class="label" for="num7_2">2</label></td>
+					<td><input type="checkbox" id="num7_3" name="numero7" value="3" onclick="deseleccionarCheckbox('numero7', 3)"><label class="label" for="num7_3">3</label></td>
+					<td><input type="checkbox" id="num7_4" name="numero7" value="4" onclick="deseleccionarCheckbox('numero7', 4)"><label class="label" for="num7_4">4</label></td>
+					<td><input type="checkbox" id="num7_5" name="numero7" value="5" onclick="deseleccionarCheckbox('numero7', 5)"><label class="label" for="num7_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>8.</td>
+					<td>Presto mucha atención a cómo me siento.</td>
+					<td><input type="checkbox" id="num8_1" name="numero8" value="1" onclick="deseleccionarCheckbox('numero8', 1)"><label class="label" for="num8_1">1</label></td>
+					<td><input type="checkbox" id="num8_2" name="numero8" value="2" onclick="deseleccionarCheckbox('numero8', 2)"><label class="label" for="num8_2">2</label></td>
+					<td><input type="checkbox" id="num8_3" name="numero8" value="3" onclick="deseleccionarCheckbox('numero8', 3)"><label class="label" for="num8_3">3</label></td>
+					<td><input type="checkbox" id="num8_4" name="numero8" value="4" onclick="deseleccionarCheckbox('numero8', 4)"><label class="label" for="num8_4">4</label></td>
+					<td><input type="checkbox" id="num8_5" name="numero8" value="5" onclick="deseleccionarCheckbox('numero8', 5)"><label class="label" for="num8_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>9.</td>
+					<td>Tengo claros mis sentimientos.</td>
+					<td><input type="checkbox" id="num9_1" name="numero9" value="1" onclick="deseleccionarCheckbox('numero9', 1)"><label class="label" for="num9_1">1</label></td>
+					<td><input type="checkbox" id="num9_2" name="numero9" value="2" onclick="deseleccionarCheckbox('numero9', 2)"><label class="label" for="num9_2">2</label></td>
+					<td><input type="checkbox" id="num9_3" name="numero9" value="3" onclick="deseleccionarCheckbox('numero9', 3)"><label class="label" for="num9_3">3</label></td>
+					<td><input type="checkbox" id="num9_4" name="numero9" value="4" onclick="deseleccionarCheckbox('numero9', 4)"><label class="label" for="num9_4">4</label></td>
+					<td><input type="checkbox" id="num9_5" name="numero9" value="5" onclick="deseleccionarCheckbox('numero9', 5)"><label class="label" for="num9_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>10.</td>
+					<td>Frecuentemente puedo definir mis sentimientos.</td>
+					<td><input type="checkbox" id="num10_1" name="numero10" value="1" onclick="deseleccionarCheckbox('numero10', 1)"><label class="label" for="num10_1">1</label></td>
+					<td><input type="checkbox" id="num10_2" name="numero10" value="2" onclick="deseleccionarCheckbox('numero10', 2)"><label class="label" for="num10_2">2</label></td>
+					<td><input type="checkbox" id="num10_3" name="numero10" value="3" onclick="deseleccionarCheckbox('numero10', 3)"><label class="label" for="num10_3">3</label></td>
+					<td><input type="checkbox" id="num10_4" name="numero10" value="4" onclick="deseleccionarCheckbox('numero10', 4)"><label class="label" for="num10_4">4</label></td>
+					<td><input type="checkbox" id="num10_5" name="numero10" value="5" onclick="deseleccionarCheckbox('numero10', 5)"><label class="label" for="num10_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>11.</td>
+					<td>Casi siempre sé cómo me siento.</td>
+					<td><input type="checkbox" id="num11_1" name="numero11" value="1" onclick="deseleccionarCheckbox('numero11', 1)"><label class="label" for="num11_1">1</label></td>
+					<td><input type="checkbox" id="num11_2" name="numero11" value="2" onclick="deseleccionarCheckbox('numero11', 2)"><label class="label" for="num11_2">2</label></td>
+					<td><input type="checkbox" id="num11_3" name="numero11" value="3" onclick="deseleccionarCheckbox('numero11', 3)"><label class="label" for="num11_3">3</label></td>
+					<td><input type="checkbox" id="num11_4" name="numero11" value="4" onclick="deseleccionarCheckbox('numero11', 4)"><label class="label" for="num11_4">4</label></td>
+					<td><input type="checkbox" id="num11_5" name="numero11" value="5" onclick="deseleccionarCheckbox('numero11', 5)"><label class="label" for="num11_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>12.</td>
+					<td>Normalmente conozco mis sentimientos sobre las personas.</td>
+					<td><input type="checkbox" id="num12_1" name="numero12" value="1" onclick="deseleccionarCheckbox('numero12', 1)"><label class="label" for="num12_1">1</label></td>
+					<td><input type="checkbox" id="num12_2" name="numero12" value="2" onclick="deseleccionarCheckbox('numero12', 2)"><label class="label" for="num12_2">2</label></td>
+					<td><input type="checkbox" id="num12_3" name="numero12" value="3" onclick="deseleccionarCheckbox('numero12', 3)"><label class="label" for="num12_3">3</label></td>
+					<td><input type="checkbox" id="num12_4" name="numero12" value="4" onclick="deseleccionarCheckbox('numero12', 4)"><label class="label" for="num12_4">4</label></td>
+					<td><input type="checkbox" id="num12_5" name="numero12" value="5" onclick="deseleccionarCheckbox('numero12', 5)"><label class="label" for="num12_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>13.</td>
+					<td>A menudo me doy cuenta de mis sentimientos en diferentes situaciones.</td>
+					<td><input type="checkbox" id="num13_1" name="numero13" value="1" onclick="deseleccionarCheckbox('numero13', 1)"><label class="label" for="num13_1">1</label></td>
+					<td><input type="checkbox" id="num13_2" name="numero13" value="2" onclick="deseleccionarCheckbox('numero13', 2)"><label class="label" for="num13_2">2</label></td>
+					<td><input type="checkbox" id="num13_3" name="numero13" value="3" onclick="deseleccionarCheckbox('numero13', 3)"><label class="label" for="num13_3">3</label></td>
+					<td><input type="checkbox" id="num13_4" name="numero13" value="4" onclick="deseleccionarCheckbox('numero13', 4)"><label class="label" for="num13_4">4</label></td>
+					<td><input type="checkbox" id="num13_5" name="numero13" value="5" onclick="deseleccionarCheckbox('numero13', 5)"><label class="label" for="num13_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>14.</td>
+					<td>Siempre puedo decir cómo me siento.</td>
+					<td><input type="checkbox" id="num14_1" name="numero14" value="1" onclick="deseleccionarCheckbox('numero14', 1)"><label class="label" for="num14_1">1</label></td>
+					<td><input type="checkbox" id="num14_2" name="numero14" value="2" onclick="deseleccionarCheckbox('numero14', 2)"><label class="label" for="num14_2">2</label></td>
+					<td><input type="checkbox" id="num14_3" name="numero14" value="3" onclick="deseleccionarCheckbox('numero14', 3)"><label class="label" for="num14_3">3</label></td>
+					<td><input type="checkbox" id="num14_4" name="numero14" value="4" onclick="deseleccionarCheckbox('numero14', 4)"><label class="label" for="num14_4">4</label></td>
+					<td><input type="checkbox" id="num14_5" name="numero14" value="5" onclick="deseleccionarCheckbox('numero14', 5)"><label class="label" for="num14_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>15.</td>
+					<td>A veces puedo decir cuáles son mis emociones.</td>
+					<td><input type="checkbox" id="num15_1" name="numero15" value="1" onclick="deseleccionarCheckbox('numero15', 1)"><label class="label" for="num15_1">1</label></td>
+					<td><input type="checkbox" id="num15_2" name="numero15" value="2" onclick="deseleccionarCheckbox('numero15', 2)"><label class="label" for="num15_2">2</label></td>
+					<td><input type="checkbox" id="num15_3" name="numero15" value="3" onclick="deseleccionarCheckbox('numero15', 3)"><label class="label" for="num15_3">3</label></td>
+					<td><input type="checkbox" id="num15_4" name="numero15" value="4" onclick="deseleccionarCheckbox('numero15', 4)"><label class="label" for="num15_4">4</label></td>
+					<td><input type="checkbox" id="num15_5" name="numero15" value="5" onclick="deseleccionarCheckbox('numero15', 5)"><label class="label" for="num15_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>16.</td>
+					<td>Puedo llegar a comprender mis sentimientos.</td>
+					<td><input type="checkbox" id="num16_1" name="numero16" value="1" onclick="deseleccionarCheckbox('numero16', 1)"><label class="label" for="num16_1">1</label></td>
+					<td><input type="checkbox" id="num16_2" name="numero16" value="2" onclick="deseleccionarCheckbox('numero16', 2)"><label class="label" for="num16_2">2</label></td>
+					<td><input type="checkbox" id="num16_3" name="numero16" value="3" onclick="deseleccionarCheckbox('numero16', 3)"><label class="label" for="num16_3">3</label></td>
+					<td><input type="checkbox" id="num16_4" name="numero16" value="4" onclick="deseleccionarCheckbox('numero16', 4)"><label class="label" for="num16_4">4</label></td>
+					<td><input type="checkbox" id="num16_5" name="numero16" value="5" onclick="deseleccionarCheckbox('numero16', 5)"><label class="label" for="num16_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>17.</td>
+					<td>Aunque a veces me siento triste, suelo tener una visión positiva.</td>
+					<td><input type="checkbox" id="num17_1" name="numero17" value="1" onclick="deseleccionarCheckbox('numero17', 1)"><label class="label" for="num17_1">1</label></td>
+					<td><input type="checkbox" id="num17_2" name="numero17" value="2" onclick="deseleccionarCheckbox('numero17', 2)"><label class="label" for="num17_2">2</label></td>
+					<td><input type="checkbox" id="num17_3" name="numero17" value="3" onclick="deseleccionarCheckbox('numero17', 3)"><label class="label" for="num17_3">3</label></td>
+					<td><input type="checkbox" id="num17_4" name="numero17" value="4" onclick="deseleccionarCheckbox('numero17', 4)"><label class="label" for="num17_4">4</label></td>
+					<td><input type="checkbox" id="num17_5" name="numero17" value="5" onclick="deseleccionarCheckbox('numero17', 5)"><label class="label" for="num17_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>18.</td>
+					<td>Aunque me sienta mal, procuro pensar en cosas agradables.</td>
+					<td><input type="checkbox" id="num18_1" name="numero18" value="1" onclick="deseleccionarCheckbox('numero18', 1)"><label class="label" for="num18_1">1</label></td>
+					<td><input type="checkbox" id="num18_2" name="numero18" value="2" onclick="deseleccionarCheckbox('numero18', 2)"><label class="label" for="num18_2">2</label></td>
+					<td><input type="checkbox" id="num18_3" name="numero18" value="3" onclick="deseleccionarCheckbox('numero18', 3)"><label class="label" for="num18_3">3</label></td>
+					<td><input type="checkbox" id="num18_4" name="numero18" value="4" onclick="deseleccionarCheckbox('numero18', 4)"><label class="label" for="num18_4">4</label></td>
+					<td><input type="checkbox" id="num18_5" name="numero18" value="5" onclick="deseleccionarCheckbox('numero18', 5)"><label class="label" for="num18_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>19.</td>
+					<td>Cuando estoy triste, pienso en todos los placeres de la vida.</td>
+					<td><input type="checkbox" id="num19_1" name="numero19" value="1" onclick="deseleccionarCheckbox('numero19', 1)"><label class="label" for="num19_1">1</label></td>
+					<td><input type="checkbox" id="num19_2" name="numero19" value="2" onclick="deseleccionarCheckbox('numero19', 2)"><label class="label" for="num19_2">2</label></td>
+					<td><input type="checkbox" id="num19_3" name="numero19" value="3" onclick="deseleccionarCheckbox('numero19', 3)"><label class="label" for="num19_3">3</label></td>
+					<td><input type="checkbox" id="num19_4" name="numero19" value="4" onclick="deseleccionarCheckbox('numero19', 4)"><label class="label" for="num19_4">4</label></td>
+					<td><input type="checkbox" id="num19_5" name="numero19" value="5" onclick="deseleccionarCheckbox('numero19', 5)"><label class="label" for="num19_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>20.</td>
+					<td>Intento tener pensamientos positivos aunque me sienta mal.</td>
+					<td><input type="checkbox" id="num20_1" name="numero20" value="1" onclick="deseleccionarCheckbox('numero20', 1)"><label class="label" for="num20_1">1</label></td>
+					<td><input type="checkbox" id="num20_2" name="numero20" value="2" onclick="deseleccionarCheckbox('numero20', 2)"><label class="label" for="num20_2">2</label></td>
+					<td><input type="checkbox" id="num20_3" name="numero20" value="3" onclick="deseleccionarCheckbox('numero20', 3)"><label class="label" for="num20_3">3</label></td>
+					<td><input type="checkbox" id="num20_4" name="numero20" value="4" onclick="deseleccionarCheckbox('numero20', 4)"><label class="label" for="num20_4">4</label></td>
+					<td><input type="checkbox" id="num20_5" name="numero20" value="5" onclick="deseleccionarCheckbox('numero20', 5)"><label class="label" for="num20_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>21.</td>
+					<td>Si doy demasiadas vueltas a las cosas, complicándolas, trato de calmarme.</td>
+					<td><input type="checkbox" id="num21_1" name="numero21" value="1" onclick="deseleccionarCheckbox('numero21', 1)"><label class="label" for="num21_1">1</label></td>
+					<td><input type="checkbox" id="num21_2" name="numero21" value="2" onclick="deseleccionarCheckbox('numero21', 2)"><label class="label" for="num21_2">2</label></td>
+					<td><input type="checkbox" id="num21_3" name="numero21" value="3" onclick="deseleccionarCheckbox('numero21', 3)"><label class="label" for="num21_3">3</label></td>
+					<td><input type="checkbox" id="num21_4" name="numero21" value="4" onclick="deseleccionarCheckbox('numero21', 4)"><label class="label" for="num21_4">4</label></td>
+					<td><input type="checkbox" id="num21_5" name="numero21" value="5" onclick="deseleccionarCheckbox('numero21', 5)"><label class="label" for="num21_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>22.</td>
+					<td>Me preocupo por tener un buen estado de ánimo.</td>
+					<td><input type="checkbox" id="num22_1" name="numero22" value="1" onclick="deseleccionarCheckbox('numero22', 1)"><label class="label" for="num22_1">1</label></td>
+					<td><input type="checkbox" id="num22_2" name="numero22" value="2" onclick="deseleccionarCheckbox('numero22', 2)"><label class="label" for="num22_2">2</label></td>
+					<td><input type="checkbox" id="num22_3" name="numero22" value="3" onclick="deseleccionarCheckbox('numero22', 3)"><label class="label" for="num22_3">3</label></td>
+					<td><input type="checkbox" id="num22_4" name="numero22" value="4" onclick="deseleccionarCheckbox('numero22', 4)"><label class="label" for="num22_4">4</label></td>
+					<td><input type="checkbox" id="num22_5" name="numero22" value="5" onclick="deseleccionarCheckbox('numero22', 5)"><label class="label" for="num22_5">5</label></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>23.</td>
+					<td>Tengo mucha energía cuando me siento feliz.</td>
+					<td><input type="checkbox" id="num23_1" name="numero23" value="1" onclick="deseleccionarCheckbox('numero23', 1)"><label class="label" for="num23_1">1</label></td>
+					<td><input type="checkbox" id="num23_2" name="numero23" value="2" onclick="deseleccionarCheckbox('numero23', 2)"><label class="label" for="num23_2">2</label></td>
+					<td><input type="checkbox" id="num23_3" name="numero23" value="3" onclick="deseleccionarCheckbox('numero23', 3)"><label class="label" for="num23_3">3</label></td>
+					<td><input type="checkbox" id="num23_4" name="numero23" value="4" onclick="deseleccionarCheckbox('numero23', 4)"><label class="label" for="num23_4">4</label></td>
+					<td><input type="checkbox" id="num23_5" name="numero23" value="5" onclick="deseleccionarCheckbox('numero23', 5)"><label class="label" for="num23_5">5</label></td>
+					<td></td>
+				</tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td>24.</td>
+					<td>Cuando estoy enfadado intento cambiar mi estado de ánimo.</td>
+					<td><input type="checkbox" id="num24_1" name="numero24" value="1" onclick="deseleccionarCheckbox('numero24', 1)"><label class="label" for="num24_1">1</label></td>
+					<td><input type="checkbox" id="num24_2" name="numero24" value="2" onclick="deseleccionarCheckbox('numero24', 2)"><label class="label" for="num24_2">2</label></td>
+					<td><input type="checkbox" id="num24_3" name="numero24" value="3" onclick="deseleccionarCheckbox('numero24', 3)"><label class="label" for="num24_3">3</label></td>
+					<td><input type="checkbox" id="num24_4" name="numero24" value="4" onclick="deseleccionarCheckbox('numero24', 4)"><label class="label" for="num24_4">4</label></td>
+					<td><input type="checkbox" id="num24_5" name="numero24" value="5" onclick="deseleccionarCheckbox('numero24', 5)"><label class="label" for="num24_5">5</label></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+		<!-- </div> -->
+		<p>Para obtener la puntuación en los tres factores de la inteligencia emocional, debes sumar los items del 1 al 8 para hallar la puntuación del factor <b>atención emocional,</b> los ítems del 9 al 16 para el factor <b>claridad emocional</b> y del 17 al 24 para el factor <b>reparación de las emociones.</b></p>
+		<br>
+		<br>
+		<br>
+		
+		<input type="button" value="CALCULAR RESULTADOS" onclick="calcularSuma()">
+		<br>
+		<br>
+		<br>
+		<div id="resultado"></div>
+		<input type="hidden" name="suma" value="" id="suma_input">
+		
+		<br>
+		<br>
+		<br>
+		<div id="resultado2"></div>
+		<input type="hidden" name="suma2" value="" id="suma_input2">
+
+		<br>
+		<br>
+		<br>
+		<div id="resultado3"></div>
+		<input type="hidden" name="suma3" value="" id="suma_input3">
+
+		<br>
+		<br>
+		<br>
+
+		
+		<button onclick="window.location.href='resultado.html'">GUARDAR RESULTADOS Y VER TABLA DE PUNTUACIONES</button>
+		
+		</div>
+	</form>
+
+	
+	</body>
+</html>

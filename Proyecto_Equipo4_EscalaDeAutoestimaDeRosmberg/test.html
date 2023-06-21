@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALA DE AUTOESTIMA DE ROSEMBERG</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        function procesarRespuestas() {
+  // Obtenemos todas las respuestas del formulario
+  var respuestas = document.querySelectorAll('input[type=radio]:checked');
+
+  // Verificamos que se hayan contestado todas las preguntas
+  if(respuestas.length !== 10) {
+    // Recorremos todas las preguntas y almacenamos las preguntas faltantes en un arreglo
+    var preguntasFaltantes = [];
+    for (var i = 1; i <= 10; i++) {
+      if(!document.querySelector('input[name="p'+ i +'"]:checked')) {
+        preguntasFaltantes.push(i);
+      }
+    }
+    // Mostramos un mensaje de error indicando las preguntas faltantes
+    alert("Por favor contesta todas las preguntas antes de procesar el resultado. Faltan por contestar las preguntas " + preguntasFaltantes.join(", "));
+  }
+  else {
+    // Si se han contestado todas las preguntas, procesamos las respuestas
+    var puntos = 0;
+
+    // Preguntas del 1 al 5 (respuestas A-D puntúan de 4 a 1)
+    for(var i = 0; i < 5; i++) {
+      var respuesta = respuestas[i].value;
+      if(respuesta === "a") {
+        puntos += 4;
+      } else if(respuesta === "b") {
+        puntos += 3;
+      } else if(respuesta === "c") {
+        puntos += 2;
+      } else if(respuesta === "d") {
+        puntos += 1;
+      }
+    }
+
+    // Preguntas del 6 al 10 (respuestas A-D puntúan de 1 a 4)
+    for(var j = 5; j < 10; j++) {
+      var respuesta = respuestas[j].value;
+      if(respuesta === "a") {
+        puntos += 1;
+      } else if(respuesta === "b") {
+        puntos += 2;
+      } else if(respuesta === "c") {
+        puntos += 3;
+      } else if(respuesta === "d") {
+        puntos += 4;
+      }
+    }
+
+    // Mostramos el resultado en una nueva ventana
+    var resultado = "";
+    if(puntos >= 30 && puntos <= 40) {
+      resultado = "Autoestima elevada. Considerada como autoestima normal.";
+    } else if(puntos >= 26 && puntos <= 29) {
+      resultado = "Autoestima media. No presenta problemas de autoestima graves, pero es conveniente mejorarla.";
+    } else if(puntos < 25) {
+      resultado = "Autoestima baja. Existen problemas significativos de autoestima.";
+    }
+  }
+}
+    </script>
+</head>
+<body>
+    <div class="contenido">
+        <h1 style="font-family: Arial, Helvetica, sans-serif; font-size: 18pt;">ESCALA DE AUTOESTIMA DE ROSEMBERG</h1>
+        <br><br>
+        <p>Por favor, conteste las siguientes frases con la respuesta que consideremás apropiada.</p>
+    </div>
+    <br>
+    <table border="1px">
+        <tr>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">A</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">B</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">C</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">D</th>
+        </tr>
+        <tr>
+            <td>Muy de acuerdo</td>
+            <td>De acuerdo</td>
+            <td>En desacuerdo</td>
+            <td>Muy en desacuerdo</td>
+        </tr>
+    </table>
+    <br/><br/>
+
+    <form method="POST" action="base_de_datos.php">
+        <div class="contenido"> 
+            <label for="persona" style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">DATOS PERSONALES:</label><br><br>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellido" placeholder="Apellido">
+        </div>
+        <br/><br/>
+    <table border="1px">
+        <tr>
+            <th></th></th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">A</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">B</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">C</th>
+            <th style="font-family: Arial, Helvetica, sans-serif; font-size: 12pt;">D</th>
+        </tr>
+        <tr>
+            <td>1. Siento que soy una persona digna de aprecio, al menos en igual medidaque los demás</td>
+            <td><input type="radio" name="p1" value="a"></td>
+            <td><input type="radio" name="p1" value="b"></td>
+            <td><input type="radio" name="p1" value="c"></td>
+            <td><input type="radio" name="p1" value="d"></td>
+        </tr>
+        <tr>
+            <td>2. Estoy convencido/a de que tengo cualidades buenas.</td>
+            <td><input type="radio" name="p2" value="a"></td>
+            <td><input type="radio" name="p2" value="b"></td>
+            <td><input type="radio" name="p2" value="c"></td>
+            <td><input type="radio" name="p2" value="d"></td>
+        </tr>
+        <tr>
+            <td>3. Soy capaz de hacer las cosas tan bien como la mayoría de la gente.</td>
+            <td><input type="radio" name="p3" value="a"></td>
+            <td><input type="radio" name="p3" value="b"></td>
+            <td><input type="radio" name="p3" value="c"></td>
+            <td><input type="radio" name="p3" value="d"></td>
+        </tr>
+        <tr>
+            <td>4. Tengo una actitud positiva hacia mí mismo/a.</td>
+            <td><input type="radio" name="p4" value="a"></td>
+            <td><input type="radio" name="p4" value="b"></td>
+            <td><input type="radio" name="p4" value="c"></td>
+            <td><input type="radio" name="p4" value="d"></td>
+        </tr>
+        <tr>
+            <td>5. En general estoy satisfecho/a de mí mismo/a.</td>
+            <td><input type="radio" name="p5" value="a"></td>
+            <td><input type="radio" name="p5" value="b"></td>
+            <td><input type="radio" name="p5" value="c"></td>
+            <td><input type="radio" name="p5" value="d"></td>
+        </tr>
+        <tr>
+            <td>6. Siento que no tengo mucho de lo que estar orgulloso/a.</td>
+            <td><input type="radio" name="p6" value="a"></td>
+            <td><input type="radio" name="p6" value="b"></td>
+            <td><input type="radio" name="p6" value="c"></td>
+            <td><input type="radio" name="p6" value="d"></td>
+        </tr>
+        <tr>
+            <td>7. En general, me inclino a pensar que soy fracasado/a.</td>
+            <td><input type="radio" name="p7" value="a"></td>
+            <td><input type="radio" name="p7" value="b"></td>
+            <td><input type="radio" name="p7" value="c"></td>
+            <td><input type="radio" name="p7" value="d"></td>
+        </tr>
+        <tr>
+            <td>8. Me gustaría poder sentir más respeto por mí mismo.</td>
+            <td><input type="radio" name="p8" value="a"></td>
+            <td><input type="radio" name="p8" value="b"></td>
+            <td><input type="radio" name="p8" value="c"></td>
+            <td><input type="radio" name="p8" value="d"></td>
+        </tr>
+        <tr>
+            <td>9. Hay veces que realmentw pienso que soy inútil.</td>
+            <td><input type="radio" name="p9" value="a"></td>
+            <td><input type="radio" name="p9" value="b"></td>
+            <td><input type="radio" name="p9" value="c"></td>
+            <td><input type="radio" name="p9" value="d"></td>
+        </tr>
+        <tr>
+            <td>10. A veces creo que no soy buena persona.</td>
+            <td><input type="radio" name="p10" value="a"></td>
+            <td><input type="radio" name="p10" value="b"></td>
+            <td><input type="radio" name="p10" value="c"></td>
+            <td><input type="radio" name="p10" value="d"></td>
+        </tr>
+    </table>
+    <br>
+    <div class="contenido">
+      <button onclick="window.location.href='resultado.html'">Enviar</button>    
+    <br><br>
+    </div>
+    </form>
+    <br/>
+    <div class="contenido">
+        <h3>Interpretación:</h3>
+        <p >De los ítems 1 al 5, las respuestas A a D se puntúan de 4 a 1</p>
+        <p>De los ítems del 6 al 10, las respuestas A a D se puntúan de 1 a 4.</p>
+        <p>De 30 a 40 puntos: Autoestima elevada. Considerada como autoestima normal.</p>
+        <p>De 26 a 29 puntos: Autoestima media. No presenta problemas de autoestimagraves,</p> 
+        <p>pero es conveniente mejorarla.</p>
+        <p>Menos de 25 puntos: Autoestima baja. Existen problemas significativos deautoestima.</p>
+    </div>
+    <br>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/*--------------------------Instrucciones.php--------------------------*/
+titulo {
+    text-align: center;
+    font-weight: bold;
+}
+p {
+    position: relative;
+    color: black;
+    font-family: 'Calibri';
+    font-size: 12pt;
+}
+.cuestionario table {
+    font-family: "Comic Sans MS";
+    font-size: 12pt;
+    border-collapse: collapse;
+    width: 100%;
+}
+.cuestionario td {
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 5px;
+}
+.cuestionario tr:nth-child(1) td:nth-child(2) {
+    text-align: center;
+}
+/*--------------------------Hojarespuestas.php--------------------------*/
+.flechas {
+    position: absolute;
+    top: 90px;
+    left: 260px;
+    z-index: 2; 
+}
+.resultados ul {
+    list-style: none;
+}
+.resultados li {
+    font-family: "Comic Sans MS";
+    font-size: 12pt;
+}
+.resultados ul li:before {
+    font-family: "Wingdings";
+    content: '';
+}
+.tablachaside {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.tablachaside table {
+    font-family: "Comic Sans MS";
+    font-size: 12pt;
+    border-collapse: collapse;
+}
+.tablachaside td {
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.tablachaside tr:nth-child(12) td {
+    visibility: hidden;
+    border-left: hidden;
+    border-right: hidden;
+}
+.tablachaside tr:nth-child(1) {
+    font-weight: bold;
+}
+.tablachaside tr:nth-child(7) td:nth-child(8), .tablachaside tr:nth-child(7) td:nth-child(9),.tablachaside tr:nth-child(7) td:nth-child(10),.tablachaside tr:nth-child(7) td:nth-child(11),.tablachaside tr:nth-child(7) td:nth-child(12),.tablachaside tr:nth-child(7) td:nth-child(13),.tablachaside tr:nth-child(7) td:nth-child(14){
+    font-weight: bold;
+}
+/*--------------------------Resultados.php--------------------------*/
+.tablainvisible {
+    content-visibility: hidden;
+    display: none;
+}
+.interpretacion {
+    padding-top: 25px;
+}
+.interpretacion table {
+    font-family: "Comic Sans MS";
+    font-size: 12pt;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.interpretacion td {
+    border: 1px solid black;
+    text-align: left;
+}
+.interpretacion tr:nth-child(2) td,.interpretacion tr:nth-child(5) td,.interpretacion tr:nth-child(7) td,.interpretacion tr:nth-child(10) td,.interpretacion tr:nth-child(12) td,.interpretacion tr:nth-child(15) td,.interpretacion tr:nth-child(17) td {
+    visibility: hidden;
+    border-left: hidden;
+    border-right: hidden;
+}
+.interpretacion tr td:nth-child(4),.interpretacion tr:nth-child(1) td:nth-child(2) {
+    visibility: hidden;
+    border-bottom: hidden;
+    border-top: hidden;
+    padding-right: 25px;
+}
+.interpretacion tr:nth-child(3) td:nth-child(2),.interpretacion tr:nth-child(3) td:nth-child(6),.interpretacion tr:nth-child(4) td:nth-child(2),.interpretacion tr:nth-child(4) td:nth-child(6),.interpretacion tr:nth-child(8) td:nth-child(2),.interpretacion tr:nth-child(8) td:nth-child(6),.interpretacion tr:nth-child(9) td:nth-child(2),.interpretacion tr:nth-child(9) td:nth-child(6),.interpretacion tr:nth-child(13) td:nth-child(2),.interpretacion tr:nth-child(13) td:nth-child(6),.interpretacion tr:nth-child(14) td:nth-child(2),.interpretacion tr:nth-child(14) td:nth-child(6),.interpretacion tr:nth-child(18) td:nth-child(2),.interpretacion tr:nth-child(19) td:nth-child(2) {
+    visibility: hidden;
+    border-top: hidden;
+    border-bottom: hidden;
+    padding-right: 15px;
+}
+.interpretacion tr td:nth-child(3), .interpretacion tr td:nth-child(7){
+    padding-right: 25px;
+}
+.profesiones {
+    padding-top: 100px;
+}
+.profesiones table {
+    font-family: "Comic Sans MS";
+    font-size: 10pt;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profesiones td {
+    border: 3px solid black;
+    text-align: left;
+}
+.profesiones td:nth-child(1), .profesiones tr:nth-child(1){
+    font-weight: bold;
+}

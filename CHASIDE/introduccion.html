@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Cuestionario CHASIDE</title>
+        <script src="funcionres.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+          span{
+            display: flex;
+        }
+
+        header{
+            border: solid rgb(0, 0, 0);
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 30%;
+        }
+
+        center{
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+        .titulo{
+            
+             font-size: 40px;
+             
+             font-family:"Calibri", sans-serif;
+            font-weight: bold;
+          
+                        
+        } 
+        .texto{
+             color: rgb(0, 0, 0);
+             font-family:"Calibri", sans-serif;
+
+        }
+        table{
+            table-layout: auto;
+            width: 30%;
+            border-collapse: collapse;
+            border: 2px solid black;
+            
+        }
+       th{
+        background-color: rgb(255, 255, 255);
+            width: 20%;
+            border: 1px solid black;
+            padding: 10px;
+       }
+        td {
+            width: 10%;
+            font-family: "Comic Sans MS", "Comic Sans";
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .num{
+          color: rgb(0, 0, 0);
+          text-align: center;
+          font-family: "Comic Sans MS", "Comic Sans";
+          font-weight: bold;
+       }
+        /* The container */
+        .container {
+          display: block;
+          position: relative;
+          padding-left: 25px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          font-size: 20px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-color: rgb(255, 255, 255);
+        }
+        .intro{
+            width: auto;
+            font-family: "Comic Sans MS", "Comic Sans";
+            border: 1px solid black;
+            padding: 10px;
+        }         
+                                
+        </style>
+        <script>
+            function redireccionar() {
+                // Redirige a la página "otra_pagina.html" en el mismo directorio
+                window.location.href = "CHASIDE.php";
+            }
+        </script>
+    </head>
+    <body>
+        <span>
+            <header>
+                <p class="titulo">Test vocacional </p>
+                <p class="texto">Introduccion</p>
+            </header>
+        </span>
+        <div class="intro">
+            Para iniciar tu camino profesional, debes tener certeza de cuál carrera elegir. Por este motivo, te recomendamos saber cuáles son tus habilidades y aptitudes y  realizar un test de orientación vocacional podría darte esa respuesta.
+            <br>
+    
+            Este tipo de test está conformado por un cuestionario de preguntas que deberás responder para obtener una evaluación técnica y un informe psicológico, que te orienta en la carrera universitaria que se adapta a tus cualidades. En otras palabras, te permite explorar tus intereses académicos y profesionales, y te sitúa en algún campo de educación avanzada.
+            <br>
+            Es un tipo de test que toma aporte de los estudios realizados por Holland, y consta de 100 preguntas que el encuestado deberá contestar con un “Sí” o “No”. Cabe destacar, que de acuerdo a sus respuestas, le será dada la orientación para elegir la carrera universitaria.
+            <BR>
+         Asimismo, es uno de los test más utilizados en la orientación vocacional, el cual permite elaborar un diagnóstico acertado sobre las habilidades, aptitudes y características de las personas.
+    
+    Su nombre, CHASIDE, se debe a las categorías de análisis de los intereses vocacionales, y son las siguientes:
+    
+   <BR> C: Administrativas y contables.<BR>
+    H: Humanísticas, ciencias jurídicas y sociales.<BR>
+    A: Artísticas.<BR>
+    S: Ciencias de la salud.<BR>
+    I: Ingenierías, carreras técnicas y computación.<BR>
+    D: Defensa y seguridad.<BR>
+    E: Ciencias exactas y agrarias.<BR>
+        <button onclick="redireccionar()">Test</button>
+        </div>
+        
+        <span>
+
+</span>
+</body>
+</html>

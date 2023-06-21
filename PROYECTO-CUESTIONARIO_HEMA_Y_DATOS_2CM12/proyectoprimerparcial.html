@@ -1,0 +1,1158 @@
+<!-- Formulario que usa una variedad de componentes. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PROGRAMA INSTITUCIONAL DE TUTOR&Iacute;A</title>
+        <style type="text/css">
+            div     { text-align: center;
+                    width: 50%;
+                    position: relative;
+                    left: 25%;
+                    border-width: 6px; }
+            .thick  { border-width: thick; }
+            .medium { border-width: medium; }
+            .thin   { border-width: thin; }
+            .solid  { border-style: solid; }
+            .double { border-style: double; }
+            .groove { border-style: groove; }
+            .ridge  { border-style: ridge; }
+            .dotted { border-style: dotted; }
+            .inset  { border-style: inset; }
+            .outset { border-style: outset; }
+            .dashed { border-style: dashed; }
+            .red    { border-color: red; }
+            .blue   { border-color: blue; }
+            h1, em      {text-decoration: underline; }
+        </style>
+        <script>
+        function deseleccionarCheckbox(nombreGrupo, valorCheckbox) {
+			var checkboxes = document.getElementsByName(nombreGrupo);
+			for (var i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].value != valorCheckbox) {
+					checkboxes[i].checked = false;
+				}
+			}
+		}
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script type="text/javascript">
+            var cont_2="";
+            var cont2="";
+            function contar() {
+                var checkboxes = document.getElementById("form1").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont = cont + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont);
+                document.getElementById('resultado').innerHTML = ""+cont;
+                document.getElementById('suma_input').value = cont;
+                return cont;
+                
+            }
+            function contar2() {
+                var checkboxes = document.getElementById("form2").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                cont2 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont2 = cont2 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont2);
+                document.getElementById('resultado2').innerHTML = ""+cont2;
+                document.getElementById('suma_input2').value = cont2;
+                cont_2 = cont2;
+                return cont_2;
+                
+            }
+            function contar3() {
+                var checkboxes = document.getElementById("form3").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont3 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont3 = cont3 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont3);
+                document.getElementById('resultado3').innerHTML = ""+cont3;
+                document.getElementById('suma_input3').value = cont3;
+                return cont3;
+            }
+            function contar4() {
+                var checkboxes = document.getElementById("form4").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont4 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont4 = cont4 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont4);
+                document.getElementById('resultado4').innerHTML = ""+cont;
+                document.getElementById('suma_input4').value = cont;
+                return cont4;
+            }
+            function contar5() {
+                var checkboxes = document.getElementById("form5").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont5 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont5 = cont5 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont5);
+                document.getElementById('resultado5').innerHTML = ""+cont5;
+                document.getElementById('suma_input5').value = cont5;
+                return cont5;
+            }
+            function contar6() {
+                var checkboxes = document.getElementById("form6").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont6 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont6 = cont6 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont6);
+                document.getElementById('resultado6').innerHTML = ""+cont6;
+                document.getElementById('suma_input6').value = cont6;
+                return cont6;
+            }
+            function contar7() {
+                var checkboxes = document.getElementById("form7").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont7 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont7 = cont7 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont7);
+                document.getElementById('resultado7').innerHTML = ""+cont7;
+                document.getElementById('suma_input7').value = cont7;
+                return cont7;
+            }
+            function contar8() {
+                var checkboxes = document.getElementById("form8").querySelectorAll('input[value="1"]:checked'); //Array que contiene los checkbox
+                var cont8 = 0; //Variable que lleva la cuenta de los checkbox pulsados
+                for (var x=0; x < checkboxes.length; x++) {
+                    if (checkboxes[x].checked) {
+                    cont8 = cont8 + 1;
+                    }
+                }
+                //alert ("El número de checkbox pulsados es " + cont8);
+                document.getElementById('resultado8').innerHTML = ""+cont8;
+                document.getElementById('suma_input8').value = cont8;
+                return cont8;
+            }
+           </script>
+           <script>
+            
+        </script>
+           
+    </head>
+    <body>
+        <script>var cont2;</script>
+        <h1>Formulario de Pograma institucional de tutoria</h1>
+        <p>rellenar el formulario de tus datos personales, como tambien de datos de tu situacion academica</p>
+        <form method="post" action="http://www.google.com">
+            <!--Datos personales-->
+            <p><label>Boleta:
+                <input name="boleta" type="text" size="25">
+            </label></p>
+            <p><label>Nombre(s):
+                <input name="nombre" type="text" size="25">
+            </label>
+            <label>Apellido paterno:
+                <input name="ApellidoPaterno" type="text" size="25">
+            </label>
+            <label>Apellido materno:
+                <input name="ApellidoMaterno" type="text" size="25">
+            </label></p>
+            <p><label>CURP:
+                <input name="curp" type="text" size="25">
+            </label></p>
+            <p><label>Tel.Casa:
+                <input name="TelCasa" type="text" size="25">
+            </label>
+            <label>Tel.Celular:
+                <input name="TelCelular" type="text" size="25">
+            </label></p>
+            <p><label>Correo electr&oacute;nico:<input name="email" type="password" size="25">
+            </label></p>
+            <p><label>Grupo:
+                <input name="Grupo" type="text" size="25">
+            </label>
+            <label>Calificaci&oacute;n:
+                <input name="calificacion" type="text" size="25">
+            </label></p>
+            <!--beca-->
+            <p>
+                <strong>¿Tienes beca?</strong><br>
+                <label>Si <input name="tienesbeca" type="radio"value="Padre" checked></label>
+                <label>No <input name="tienesbeca" type="radio" value="Madre"></label>
+                <strong>¿Cu&aacute;l?</strong><br>
+                <label>PRONABE <input name="beca" type="radio"value="pronabe" checked></label>
+                <label>IPN <input name="beca" type="radio" value="IPN"></label>
+                <label>TELMEX <input name="beca" type="radio"value="telmex"></label>
+                <label>Otra <input name="beca" type="radio" value="otra"></label>
+                <label>¿Qu&eacute; tipo de beca?
+                <input name="Tipodebeca" type="text" size="25">
+                </label>
+            </p>
+            <!-- descripcion situacion familiar-->
+            <p><strong>Describir brevemente tu situaci&oacute;n familiar</strong><br>
+                <label>
+                <textarea name="Describir situacion familiar"rows="4" cols="36">Describir brevemente tu situacion familiar </textarea>
+            </label></p>
+            <!-- aporte de la familia-->
+            <p>
+                <strong>¿Qui&eacute;n aporta econ&oacute;micamente en tu familia?</strong><br>
+                <label>Padre <input name="aporta" type="radio"value="Padre" checked></label>
+                <label>Madre <input name="aporta" type="radio" value="Madre"></label>
+                <label>Tu <input name="aporta" type="radio"value="Tu"></label>
+                <label>Otro <input name="aporta" type="radio" value="otro"></label>
+            </p>
+            <!--Ingresos mensualesa -->
+            <p>
+                <strong>¿Los ingresos mensuales familiares son?</strong><br>
+                <label>Menor a 6000 <input name="ingresos" type="radio"value="Menor a 6000" checked></label>
+                <label>6000 a 8000 <input name="ingresos" type="radio" value="6000 a 8000"></label>
+                <label>8000 a 12000 <input name="ingresos" type="radio"value="8000 a 12000"></label>
+                <label>13000 a 20000 <input name="ingresos" type="radio" value="13000 a 20000"></label>
+                <label>M&aacute;s de 20000 <input name="ingresos" type="radio" value="M&aacute;s de 20000"></label>
+            </p>
+            <!-- puntuales -->
+            <p>
+                <strong>¿Eres puntual en tus actividades?</strong><br>
+                <label>Si <input name="puntual" type="radio"value="Si" checked></label>
+                <label>No <input name="puntual" type="radio" value="No"></label>
+            </p>
+            <!-- empleo-->
+            <p>
+                <strong>¿Tienes alg&uacute;n empleo?</strong><br>
+                <label>No <input name="empleo" type="radio"value="No" checked></label>
+                <label>Si <input name="empleo" type="radio" value="Si"></label>
+                <label>¿Cu&aacute;l?
+                    <input name="cual" type="text" size="25">
+                </label>
+            </p>
+            <!-- adeudo-->
+            <p>
+                <strong>¿Adeudas algunas unidades de aprendizaje?¿Cu&aacute;l (es)?</strong><br>
+                <label>
+                    <textarea name="Escribir los adeudos"rows="4" cols="36">Describir los adeudos </textarea>
+                </label>
+            </p>
+            <!--tiempo a estudiar-->
+            <p>
+                <strong>¿Cu&aacute;nto tiempo dedicas a estudiar?</strong><br>
+                <label>Diariamente:
+                    <input name="tiempoaestudiardiariamente" type="text" size="25">
+                </label>
+                <label>Sabados y domingos:
+                    <input name="tiempoaestudiarsab-dom" type="text" size="25">
+                </label>
+                <label>En ex&aacute;menes:
+                    <input name="tiempoaestudiarexamen" type="text" size="25">
+                </label>
+            </p>
+            <!--cosas cotidianas-->
+            <p><label>¿Cu&aacute;nto tiempo escuchas m&uacute; a la semana?
+                <input name="escuhasmusicasemana" type="text" size="25">
+            </label></p>
+            <p><label>¿Cu&aacute;nto tiempo ves TV a la semana?
+                <input name="vertvsemana" type="text" size="25">
+            </label></p>
+            <p><label>¿Cu&aacute;nto tiempo a la semana utilizas Celulares?
+                <input name="utilizarcelusemana" type="text" size="25">
+            </label></p>
+            <p><label>¿Cu&aacute;nto tiempo a la semana utilizas IPADS O Tablets?
+                <input name="utilizaripadtabletssemana" type="text" size="25">
+            </label></p>
+            <p><label>¿Cu&aacute;nto tiempo a la semana utilizas computadoras?
+                <input name="utilizarcompusemana" type="text" size="25">
+            </label></p>
+            <p>
+                <strong>¿Utilizas medios impresos (libros, revistas, etc.) para realziar tus tareas?¿Cu&aacute;les?</strong><br>
+                <label>
+                    <textarea name="Describir medios impresos"rows="4" cols="36">Describir brevemente tu situacion familiar </textarea>
+                </label>
+            </p>
+        </form>
+            <!---->
+            <div><p><em><strong>Cuestionario sobre H&aacute;bitos de estudio y Motivaci&oacute;n para el aprendizaje H.E.M.A.</strong></em></p></div>
+            <div class="solid"><strong>rellenar las casillas de tal forma que no pongas 2 casillas al mismo aceptadas al mismo tiempo</strong></div>
+            <!--factores ambientales-->
+            <div class="groove">
+                <p>Este cuestionario pretende ser una 
+                    <strong>herramienta diagn&oacute;stica</strong> de los posibles problemas 
+                    en cuanto<br> al rendimiento y las <strong>actitudes frente al estudio 
+                        (aprender a aprender)</strong>. Conocer los problemas que se<br> pueden presentar 
+                    a la hora de <strong>enfrentarse a un estudio</strong> intenso puede ayudarte a 
+                    mejorar incre&iacute;blemente<br> tus resultados. Por este motivo es 
+                    importante que respondas con sinceridad a los diferentes &iacute;tems 
+                    y que no<br> te olvides de rellenar el &uacute;ltimo apartado en el que 
+                    deber&aacute;s reflexionar sobre otros aspectos que influyen en<br> tu 
+                    estudio, no mencionados en el cuestionario.<br>
+                    Gracias a esta herramienta podrás conocer no s&oacute;lo la 
+                    valoraci&oacute;n general de tus <strong>actitudes y motivaciones</strong><br> a la hora 
+                    de enfrentarte al estudio, sino que podr&aacute;s obtener unas 
+                    conclusiones detalladas de cada apartado,<br> orientándote en la 
+                    b&uacute;squeda de soluciones concretas a tus problemas.
+                </p><hr>
+            </div>
+            <div>
+                <form id="form1" method="post" action="#">
+                    <table id="myTable" border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>I. FACTORES AMBIENTALES</strong><br>Definici&oacute;n: Son aquellos factores externos al estudio, que constituyen el h&aacute;bitat en el que &eacute;ste se <br>desarrolla y que pueden influir negativa o positivamente en el rendimiento y la obtenci&oacute;n de resultados. 
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+    
+                                <th colspan="2"> <input type="button" name="Submit" value="Contar" onClick="contar();"> </th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            
+                                <tr>
+                                    <th>¿Tienes un lugar permanente de estudio?</th>
+                                    <!--<td><input type="checkbox" name="checkbox" id="chk1"><label for="chk1"> </label></td>-->
+                                    <!--<td><label> <input name="checkbox" type="radio"value="Diseno"></label></td>-->
+                                    <td><input type="checkbox" id="num1_1" name="numero1_1" value="1" onclick="deseleccionarCheckbox('numero1_1', 1)"><label for="num1_1"></label></td>
+                                    <td><input type="checkbox" id="num1_2" name="numero1_1" value="2" onclick="deseleccionarCheckbox('numero1_1', 2)"><label for="num1_2"></label></td>
+					
+                                </tr>
+                                <tr>
+                                    <th>¿Puedes eliminar fácilmente los ruidos molestos?</th>
+                                    <td><input type="checkbox" id="num2_1" name="numero1_2" value="1" onclick="deseleccionarCheckbox('numero1_2', 1)"><label for="num2_1"></label></td>
+                                    <td><input type="checkbox" id="num2_2" name="numero1_2" value="2" onclick="deseleccionarCheckbox('numero1_2', 2)"><label for="num2_2"></label></td>
+                                </tr>
+                                <tr>
+                                    <th>¿Es tu lugar de estudios suficientemente amplio?</th>
+                                    <td><input type="checkbox" id="num3_1" name="numero1_3" value="1" onclick="deseleccionarCheckbox('numero1_3', 1)"><label for="num3_1"></label></td>
+                                    <td><input type="checkbox" id="num3_2" name="numero1_3" value="2" onclick="deseleccionarCheckbox('numero1_3', 2)"><label for="num3_2"></label></td>
+                                </tr>
+                                <tr>
+                                    <th>¿Consigues la oxigenación, temperatura y humedad adecuadas cuando estudias?</th>
+                                    <td><input type="checkbox" id="num4_1" name="numero1_4" value="1" onclick="deseleccionarCheckbox('numero1_4', 1)"><label for="num4_1"></label></td>
+                                    <td><input type="checkbox" id="num4_2" name="numero1_4" value="2" onclick="deseleccionarCheckbox('numero1_4', 2)"><label for="num4_2"></label></td>
+                                </tr><tr>
+                                    <th>¿Cuándo utilizas luz artificial, es suficientemente buena?</th>
+                                    <td><input type="checkbox" id="num5_1" name="numero1_5" value="1" onclick="deseleccionarCheckbox('numero1_5', 1)"><label for="num5_1"></label></td>
+                                    <td><input type="checkbox" id="num5_2" name="numero1_5" value="2" onclick="deseleccionarCheckbox('numero1_5', 2)"><label for="num5_2"></label></td>
+                                </tr>
+                                <tr>
+                                    <th>¿Tu mesa es espaciosa?</th>
+                                    <td><input type="checkbox" id="num6_1" name="numero1_6" value="1" onclick="deseleccionarCheckbox('numero1_6', 1)"><label for="num6_1"></label></td>
+                                    <td><input type="checkbox" id="num6_2" name="numero1_6" value="2" onclick="deseleccionarCheckbox('numero1_6', 2)"><label for="num6_2"></label></td>
+                                </tr><tr>
+                                    <th>¿Puedes apoyar con facilidad los antebrazos?</th>
+                                    <td><input type="checkbox" id="num7_1" name="numero1_7" value="1" onclick="deseleccionarCheckbox('numero1_7', 1)"><label for="num7_1"></label></td>
+                                    <td><input type="checkbox" id="num7_2" name="numero1_7" value="2" onclick="deseleccionarCheckbox('numero1_7', 2)"><label for="num7_2"></label></td>
+                                </tr>
+                                <tr>
+                                    <th>La superficie ¿es mate u opaca?</th>
+                                    <td><input type="checkbox" id="num8_1" name="numero1_8" value="1" onclick="deseleccionarCheckbox('numero1_8', 1)"><label for="num8_1"></label></td>
+                                    <td><input type="checkbox" id="num8_2" name="numero1_8" value="2" onclick="deseleccionarCheckbox('numero1_8', 2)"><label for="num8_2"></label></td>
+                                </tr><tr>
+                                    <th>La silla es de relativa dureza y con respaldo</th>
+                                    <td><input type="checkbox" id="num9_1" name="numero1_9" value="1" onclick="deseleccionarCheckbox('numero1_9', 1)"><label for="num9_1"></label></td>
+                                    <td><input type="checkbox" id="num9_2" name="numero1_9" value="2" onclick="deseleccionarCheckbox('numero1_9', 2)"><label for="num9_2"></label></td>
+                                </tr>
+                                <tr>
+                                    <th>¿Utilizas la luz diurna permanentemente?</th>
+                                    <td><input type="checkbox" id="num10_1" name="numero1_10" value="1" onclick="deseleccionarCheckbox('numero1_10', 1)"><label for="num10_1"></label></td>
+                                    <td><input type="checkbox" id="num10_2" name="numero1_10" value="2" onclick="deseleccionarCheckbox('numero1_10', 2)"><label for="num10_2"></label></td>
+                                </tr>
+                                
+                                
+                            
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+    
+                <!-- salud fisica y emocional-->
+                <form id="form2" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>II. SALUD F&Iacute;SICA Y EMOCIONAL</strong><br>Definici&oacute;n: Son las características propias del individuo derivadas de su trayectoria bio-psico-social, y<br> que pueden influir notablemente en las actitudes y motivaciones frente al estudio  
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" id="C2" onclick="contar2();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Haces ejercicio diariamente?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero2_1" value="1" onclick="deseleccionarCheckbox('numero2_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero2_1" value="2" onclick="deseleccionarCheckbox('numero2_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Cambias de actividad cuando te sientes cansado?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero2_2" value="1" onclick="deseleccionarCheckbox('numero2_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero2_2" value="2" onclick="deseleccionarCheckbox('numero2_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Puedes dedicarte a un estudio prolongado sin sentir molestias en los ojos?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero2_3" value="1" onclick="deseleccionarCheckbox('numero2_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero2_3" value="2" onclick="deseleccionarCheckbox('numero2_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Duermes generalmente ocho horas al d&iacute;a?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero2_4" value="1" onclick="deseleccionarCheckbox('numero2_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero2_4" value="2" onclick="deseleccionarCheckbox('numero2_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tu r&eacute;gimen alimenticio es variado y razonable?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero2_5" value="1" onclick="deseleccionarCheckbox('numero2_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero2_5" value="2" onclick="deseleccionarCheckbox('numero2_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Reduces al m&aacute;ximo el alcohol y el tabaco?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero2_6" value="1" onclick="deseleccionarCheckbox('numero2_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero2_6" value="2" onclick="deseleccionarCheckbox('numero2_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tienes en cuenta la incidencia de los problemas afectivos en el rendimiento?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero2_7" value="1" onclick="deseleccionarCheckbox('numero2_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero2_7" value="2" onclick="deseleccionarCheckbox('numero2_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tienes inter&eacute;s en los estudios universitarios?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero2_8" value="1" onclick="deseleccionarCheckbox('numero2_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero2_8" value="2" onclick="deseleccionarCheckbox('numero2_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>Una tensi&oacute;n fuerte y prolongada ¿perjudica tu retenci&oacute;n?		</th>
+                                <td><input type="checkbox" id="num9_1" name="numero2_9" value="1" onclick="deseleccionarCheckbox('numero2_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero2_9" value="2" onclick="deseleccionarCheckbox('numero2_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Sabes salir de la frustraci&oacute;n que te produce el no conseguir estudiar lo programado?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero2_10" value="1" onclick="deseleccionarCheckbox('numero2_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero2_10" value="2" onclick="deseleccionarCheckbox('numero2_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                <!--aspecto sobre el metodo de estudio-->
+                <form id="form3" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>III. ASPECTOS SOBRE EL M&Eacute;TODO DE ESTUDIO</strong><br>Definici&oacute;n: Son el conjunto de rituales y procedimientos que se establecen en torno al estudio y que<br> determinan en gran medida la capacidad de concentración, aprendizaje y memoria.
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar3();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Haces una exploraci&oacute;n general antes de concentrarte para estudiar?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero3_1" value="1" onclick="deseleccionarCheckbox('numero3_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero3_1" value="2" onclick="deseleccionarCheckbox('numero3_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Comienzas con una lectura r&aacute;pida de todo lo que tienes que estudiar cada vez?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero3_2" value="1" onclick="deseleccionarCheckbox('numero3_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero3_2" value="2" onclick="deseleccionarCheckbox('numero3_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Puedes comprender con claridad el contenido de lo que estudias?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero3_3" value="1" onclick="deseleccionarCheckbox('numero3_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero3_3" value="2" onclick="deseleccionarCheckbox('numero3_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Distingues los puntos principales y lo fundamental de cada tema?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero3_4" value="1" onclick="deseleccionarCheckbox('numero3_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero3_4" value="2" onclick="deseleccionarCheckbox('numero3_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Haces esquemas clasificadores de cada unidad de contenido?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero3_5" value="1" onclick="deseleccionarCheckbox('numero3_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero3_5" value="2" onclick="deseleccionarCheckbox('numero3_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Sintetizas o resumes en orden para facilitarte los repasos?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero3_6" value="1" onclick="deseleccionarCheckbox('numero3_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero3_6" value="2" onclick="deseleccionarCheckbox('numero3_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Destacas de alguna manera el contenido principal en lo que estudias?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero3_7" value="1" onclick="deseleccionarCheckbox('numero3_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero3_7" value="2" onclick="deseleccionarCheckbox('numero3_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Llevas los apuntes al d&iacute;a y los completas si es preciso?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero3_8" value="1" onclick="deseleccionarCheckbox('numero3_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero3_8" value="2" onclick="deseleccionarCheckbox('numero3_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Buscas los sitios donde oyes bien y tienes buena visibilidad?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero3_9" value="1" onclick="deseleccionarCheckbox('numero3_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero3_9" value="2" onclick="deseleccionarCheckbox('numero3_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Dispones del material necesario complementario para estudiar?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero3_10" value="1" onclick="deseleccionarCheckbox('numero3_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero3_10" value="2" onclick="deseleccionarCheckbox('numero3_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                    
+                <!-- organizacion de planes y horarios-->
+                <form id="form4" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>IV. ORGANIZACI&Oacute;N DE PLANES Y HORARIOS</strong><br>Definici&oacute;n: La organización es el conjunto de acciones encaminadas a distribuir el contenido del estudio y<br> la carga de trabajo, atendiendo a los factores personales y temporales.
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar4();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Acostumbras a tener un horario m&aacute;s o menos habitual de estudio?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero4_1" value="1" onclick="deseleccionarCheckbox('numero4_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero4_1" value="2" onclick="deseleccionarCheckbox('numero4_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te centras f&aacute;cilmente en el estudio?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero4_2" value="1" onclick="deseleccionarCheckbox('numero4_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero4_2" value="2" onclick="deseleccionarCheckbox('numero4_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consigues resultados satisfactorios cuando te pones a estudiar?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero4_3" value="1" onclick="deseleccionarCheckbox('numero4_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero4_3" value="2" onclick="deseleccionarCheckbox('numero4_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Piensas en las prioridades, en tu estudio y trabajos, en el tiempo que dedicas a estudiar?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero4_4" value="1" onclick="deseleccionarCheckbox('numero4_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero4_4" value="2" onclick="deseleccionarCheckbox('numero4_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Distribuyes generalmente tu tiempo de estudio a lo largo de la semana?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero4_5" value="1" onclick="deseleccionarCheckbox('numero4_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero4_5" value="2" onclick="deseleccionarCheckbox('numero4_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te concentras con facilidad despu&eacute;s de un corto per&iacute;odo de adaptaci&oacute;n?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero4_6" value="1" onclick="deseleccionarCheckbox('numero4_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero4_6" value="2" onclick="deseleccionarCheckbox('numero4_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>Antes de terminar tu estudio, ¿aprovechas el corto per&iacute;odo de más rendimiento?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero4_7" value="1" onclick="deseleccionarCheckbox('numero4_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero4_7" value="2" onclick="deseleccionarCheckbox('numero4_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Acostumbras a hacer peque&ntilde;os descansos, cada vez m&aacute;s frecuentes, cuando aumenta el tiempo de tu dedicaci&oacute;n?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero4_8" value="1" onclick="deseleccionarCheckbox('numero4_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero4_8" value="2" onclick="deseleccionarCheckbox('numero4_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Te pones a estudiar con intención consciente de aprovechar el tiempo?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero4_9" value="1" onclick="deseleccionarCheckbox('numero4_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero4_9" value="2" onclick="deseleccionarCheckbox('numero4_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te mantienes al menos algún tiempo estudiando, aunque de momento no te concentres?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero4_10" value="1" onclick="deseleccionarCheckbox('numero4_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero4_10" value="2" onclick="deseleccionarCheckbox('numero4_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+                <!--realizacion de examenes-->
+                <form id="form5" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>V. REALIZACI&Oacute;N DE EX&Aacute;MENES</strong><br>Definici&oacute;n: Este apartado se refiere a las t&eacute;cnicas y h&aacute;bitos adquiridos en cuanto a la realizaci&oacute;n de<br> ex&aacute;menes, es decir, en cuanto a la capacidad para demostrar con &eacute;xito los resultados del aprendizaje.
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar5();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Te desvelas la noche anterior a un examen?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero5_1" value="1" onclick="deseleccionarCheckbox('numero5_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero5_1" value="2" onclick="deseleccionarCheckbox('numero5_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Lees detenidamente las instrucciones?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero5_2" value="1" onclick="deseleccionarCheckbox('numero5_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero5_2" value="2" onclick="deseleccionarCheckbox('numero5_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Distribuyes el tiempo que tienes entre las preguntas que tienes que contestar?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero5_3" value="1" onclick="deseleccionarCheckbox('numero5_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero5_3" value="2" onclick="deseleccionarCheckbox('numero5_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Comienzas por las cuestiones m&aacute;s sencillas o que ya sabes?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero5_4" value="1" onclick="deseleccionarCheckbox('numero5_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero5_4" value="2" onclick="deseleccionarCheckbox('numero5_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Distingues con claridad la palabra o palabras que te indican lo que realmente se te pide?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero5_5" value="1" onclick="deseleccionarCheckbox('numero5_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero5_5" value="2" onclick="deseleccionarCheckbox('numero5_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Haces el esquema preciso que facilite el desarrollo y te permita no dejarlo incompleto?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero5_6" value="1" onclick="deseleccionarCheckbox('numero5_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero5_6" value="2" onclick="deseleccionarCheckbox('numero5_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Escribes con claridad?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero5_7" value="1" onclick="deseleccionarCheckbox('numero5_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero5_7" value="2" onclick="deseleccionarCheckbox('numero5_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tienes buena ortograf&iacute;a?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero5_8" value="1" onclick="deseleccionarCheckbox('numero5_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero5_8" value="2" onclick="deseleccionarCheckbox('numero5_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Dejas m&aacute;rgenes, t&iacute;tulos, apartados, etc.,..?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero5_9" value="1" onclick="deseleccionarCheckbox('numero5_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero5_9" value="2" onclick="deseleccionarCheckbox('numero5_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Relees el ejercicio antes de entregarlo?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero5_10" value="1" onclick="deseleccionarCheckbox('numero5_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero5_10" value="2" onclick="deseleccionarCheckbox('numero5_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+                <!--busqueda de informacion-->
+                <form id="form6" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>VI. B&Uacute;SQUEDA DE INFORMACI&Oacute;N</strong><br>Definici&oacute;n: Son las habilidades y h&aacute;bitos adquiridos en lo relacionado con la obtención de informaci&oacute;n y<br> el an&aacute;lisis de la documentación al alcance del estudiante 
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar6();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Sabes hacer fichas bibliogr&aacute;ficas?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero6_1" value="1" onclick="deseleccionarCheckbox('numero6_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero6_1" value="2" onclick="deseleccionarCheckbox('numero6_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Manejas los ficheros tradicionales con facilidad?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero6_2" value="1" onclick="deseleccionarCheckbox('numero6_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero6_2" value="2" onclick="deseleccionarCheckbox('numero6_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tienes un fichero personal ampliable?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero6_3" value="1" onclick="deseleccionarCheckbox('numero6_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero6_3" value="2" onclick="deseleccionarCheckbox('numero6_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Acostumbras a sacar fichas de contenido, frases o referencias?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero6_4" value="1" onclick="deseleccionarCheckbox('numero6_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero6_4" value="2" onclick="deseleccionarCheckbox('numero6_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Conoces la clasificaci&oacute;n decimal universal aplicada a la documentaci&oacute;n?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero6_5" value="1" onclick="deseleccionarCheckbox('numero6_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero6_5" value="2" onclick="deseleccionarCheckbox('numero6_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Conoces las bibliotecas generales y su manejo?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero6_6" value="1" onclick="deseleccionarCheckbox('numero6_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero6_6" value="2" onclick="deseleccionarCheckbox('numero6_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tienes localizada alguna fuente de investigaci&oacute;n de tu línea de estudio?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero6_7" value="1" onclick="deseleccionarCheckbox('numero6_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero6_7" value="2" onclick="deseleccionarCheckbox('numero6_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Sabes d&oacute;nde consultar revistas?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero6_8" value="1" onclick="deseleccionarCheckbox('numero6_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero6_8" value="2" onclick="deseleccionarCheckbox('numero6_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tienes conocimiento de las principales librer&iacute;as y editoriales?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero6_9" value="1" onclick="deseleccionarCheckbox('numero6_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero6_9" value="2" onclick="deseleccionarCheckbox('numero6_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Conoces los sistemas bibliogr&aacute;ficos digitalizados?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero6_10" value="1" onclick="deseleccionarCheckbox('numero6_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero6_10" value="2" onclick="deseleccionarCheckbox('numero6_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+                <!--comunicacion academica oral y escrita-->
+                <form id="form7" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>VII. COMUNICACI&Oacute;N ACAD&Eacute;MICA ORAL Y ESCRITA</strong><br>Definici&oacute;n: Son las actitudes verbales y escritas que se poseen a la hora de transmitir correctamente lo<br> que se ha aprendido y relacionarse dentro del &aacute;mbito acad&eacute;mico al que se enfrenta el estudiante 
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar7();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Tienes claras las diferencias entre los distintos tipos de redacción cient&iacute;fica?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero7_1" value="1" onclick="deseleccionarCheckbox('numero7_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero7_1" value="2" onclick="deseleccionarCheckbox('numero7_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Conoces la estructura general de un trabajo cient&iacute;fico?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero7_2" value="1" onclick="deseleccionarCheckbox('numero7_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero7_2" value="2" onclick="deseleccionarCheckbox('numero7_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Podr&iacute;s expresar con facilidad lo escrito con anterioridad?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero7_3" value="1" onclick="deseleccionarCheckbox('numero7_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero7_3" value="2" onclick="deseleccionarCheckbox('numero7_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Sabes argumentar para defender tus aportaciones?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero7_4" value="1" onclick="deseleccionarCheckbox('numero7_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero7_4" value="2" onclick="deseleccionarCheckbox('numero7_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Sabes criticar y discutir los trabajos de otros?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero7_5" value="1" onclick="deseleccionarCheckbox('numero7_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero7_5" value="2" onclick="deseleccionarCheckbox('numero7_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te ser&iacute;a f&aacute;cil trabajar en equipo?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero7_6" value="1" onclick="deseleccionarCheckbox('numero7_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero7_6" value="2" onclick="deseleccionarCheckbox('numero7_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tienes acceso directo a un mecanografiado sencillo?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero7_7" value="1" onclick="deseleccionarCheckbox('numero7_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero7_7" value="2" onclick="deseleccionarCheckbox('numero7_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Puedes utilizar m&iacute;nimamente otro idioma?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero7_8" value="1" onclick="deseleccionarCheckbox('numero7_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero7_8" value="2" onclick="deseleccionarCheckbox('numero7_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Sabes establecer contacto con personas de inter&eacute;s para tu trabajo?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero7_9" value="1" onclick="deseleccionarCheckbox('numero7_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero7_9" value="2" onclick="deseleccionarCheckbox('numero7_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te expresas con claridad y precisi&oacute;n al comunicar algo?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero7_10" value="1" onclick="deseleccionarCheckbox('numero7_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero7_10" value="2" onclick="deseleccionarCheckbox('numero7_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+                <!--acerca de la motivacion para aprender-->
+                <form id="form8" method="post" action="#">
+                    <table border="1">
+                        <thead>
+                            <!-- los elemntos rospawn y colspan combinan el numero -->
+                            <!-- especificado de cleda en sentido vertical u horizontal -->
+                            <tr>
+                                <!-- combina cuatro columnas -->
+                                <th colspan="3">
+                                    <strong>VIII. ACERCA DE LA MOTIVACI&Oacute;N PARA APRENDER</strong><br>Definici&oacute;n: La motivaci&oacute;n son el conjunto de causas, deseos o elementos que impulsan y orientan la<br> conducta de una persona, en este caso, hacia el estudio.
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> </th>
+                                <th><strong>S&Iacute;</strong></th>
+                                <th><strong>NO</strong></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Total</th>
+                                <th colspan="2"><input type="button" name="Submit" value="Contar" onClick="contar8();"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>¿Consideras tu estudio como algo realmente personal?</th>
+                                <td><input type="checkbox" id="num1_1" name="numero8_1" value="1" onclick="deseleccionarCheckbox('numero8_1', 1)"><label for="num1_1"></label></td>
+                                <td><input type="checkbox" id="num1_2" name="numero8_1" value="2" onclick="deseleccionarCheckbox('numero8_1', 2)"><label for="num1_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tienes confianza en tu capacidad de aprender?</th>
+                                <td><input type="checkbox" id="num2_1" name="numero8_2" value="1" onclick="deseleccionarCheckbox('numero8_2', 1)"><label for="num2_1"></label></td>
+                                <td><input type="checkbox" id="num2_2" name="numero8_2" value="2" onclick="deseleccionarCheckbox('numero8_2', 2)"><label for="num2_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consideras que lo que estudias est&aacute; en relación con tus intereses?</th>
+                                <td><input type="checkbox" id="num3_1" name="numero8_3" value="1" onclick="deseleccionarCheckbox('numero8_3', 1)"><label for="num3_1"></label></td>
+                                <td><input type="checkbox" id="num3_2" name="numero8_3" value="2" onclick="deseleccionarCheckbox('numero8_3', 2)"><label for="num3_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de comprender lo que estudias aunque te resulte dif&iacute;cil entenderlo o aceptarlo?</th>
+                                <td><input type="checkbox" id="num4_1" name="numero8_4" value="1" onclick="deseleccionarCheckbox('numero8_4', 1)"><label for="num4_1"></label></td>
+                                <td><input type="checkbox" id="num4_2" name="numero8_4" value="2" onclick="deseleccionarCheckbox('numero8_4', 2)"><label for="num4_2"></label></td>
+                            </tr><tr>
+                                <th>¿Procuras participar activamente en las propuestas de tus compa&ntilde;eros y profesores?</th>
+                                <td><input type="checkbox" id="num5_1" name="numero8_5" value="1" onclick="deseleccionarCheckbox('numero8_5', 1)"><label for="num5_1"></label></td>
+                                <td><input type="checkbox" id="num5_2" name="numero8_5" value="2" onclick="deseleccionarCheckbox('numero8_5', 2)"><label for="num5_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consideras tu tiempo de aprendizaje como digno de ser vivido con intensidad?</th>
+                                <td><input type="checkbox" id="num6_1" name="numero8_6" value="1" onclick="deseleccionarCheckbox('numero8_6', 1)"><label for="num6_1"></label></td>
+                                <td><input type="checkbox" id="num6_2" name="numero8_6" value="2" onclick="deseleccionarCheckbox('numero8_6', 2)"><label for="num6_2"></label></td>
+                            </tr><tr>
+                                <th>¿Llevas a cabo las propuestas de los profesores con el fin de facilitar la comunicaci&oacute;n con ellos?</th>
+                                <td><input type="checkbox" id="num7_1" name="numero8_7" value="1" onclick="deseleccionarCheckbox('numero8_7', 1)"><label for="num7_1"></label></td>
+                                <td><input type="checkbox" id="num7_2" name="numero8_7" value="2" onclick="deseleccionarCheckbox('numero8_7', 2)"><label for="num7_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de reflexionar sobre la forma en que aprendes?</th>
+                                <td><input type="checkbox" id="num8_1" name="numero8_8" value="1" onclick="deseleccionarCheckbox('numero8_8', 1)"><label for="num8_1"></label></td>
+                                <td><input type="checkbox" id="num8_2" name="numero8_8" value="2" onclick="deseleccionarCheckbox('numero8_8', 2)"><label for="num8_2"></label></td>
+                            </tr><tr>
+                                <th>¿Has pensado en c&oacute;mo poder aprovechar mejor tu tiempo de aprender?</th>
+                                <td><input type="checkbox" id="num9_1" name="numero8_9" value="1" onclick="deseleccionarCheckbox('numero8_9', 1)"><label for="num9_1"></label></td>
+                                <td><input type="checkbox" id="num9_2" name="numero8_9" value="2" onclick="deseleccionarCheckbox('numero8_9', 2)"><label for="num9_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consideras fundamental el contar con otros para conseguir tus objetivos de aprendizaje?</th>
+                                <td><input type="checkbox" id="num10_1" name="numero8_10" value="1" onclick="deseleccionarCheckbox('numero8_10', 1)"><label for="num10_1"></label></td>
+                                <td><input type="checkbox" id="num10_2" name="numero8_10" value="2" onclick="deseleccionarCheckbox('numero8_10', 2)"><label for="num10_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tiendes a trabajar personalmente para profundizar en la comprensi&oacute;n de los contenidos?</th>
+                                <td><input type="checkbox" id="num11_1" name="numero8_11" value="1" onclick="deseleccionarCheckbox('numero8_11', 1)"><label for="num11_1"></label></td>
+                                <td><input type="checkbox" id="num11_2" name="numero8_11" value="2" onclick="deseleccionarCheckbox('numero8_11', 2)"><label for="num11_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Percibes que el estudio es el medio para recrear el saber y divulgarlo?</th>
+                                <td><input type="checkbox" id="num12_1" name="numero8_12" value="1" onclick="deseleccionarCheckbox('numero8_12', 1)"><label for="num12_1"></label></td>
+                                <td><input type="checkbox" id="num12_2" name="numero8_12" value="2" onclick="deseleccionarCheckbox('numero8_12', 2)"><label for="num12_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consideras las preguntas en clase y la realización de trabajos como medios para impulsarte a estudiar?</th>
+                                <td><input type="checkbox" id="num13_1" name="numero8_13" value="1" onclick="deseleccionarCheckbox('numero8_13', 1)"><label for="num13_1"></label></td>
+                                <td><input type="checkbox" id="num13_2" name="numero8_13" value="2" onclick="deseleccionarCheckbox('numero8_13', 2)"><label for="num13_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Piensas que la asistencia a clase es muy importante para orientarte en tu proceso de estudio?</th>
+                                <td><input type="checkbox" id="num14_1" name="numero8_14" value="1" onclick="deseleccionarCheckbox('numero8_14', 1)"><label for="num14_1"></label></td>
+                                <td><input type="checkbox" id="num14_2" name="numero8_14" value="2" onclick="deseleccionarCheckbox('numero8_14', 2)"><label for="num14_2"></label></td>
+                            </tr><tr>
+                                <th>¿Las bajas puntuaciones te hacen reaccionar para estudiar más y mejor?</th>
+                                <td><input type="checkbox" id="num15_1" name="numero8_15" value="1" onclick="deseleccionarCheckbox('numero8_15', 1)"><label for="num15_1"></label></td>
+                                <td><input type="checkbox" id="num15_2" name="numero8_15" value="2" onclick="deseleccionarCheckbox('numero8_15', 2)"><label for="num15_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Consideras al profesor como alguien de quien puedes servirte para aprender?</th>
+                                <td><input type="checkbox" id="num16_1" name="numero8_16" value="1" onclick="deseleccionarCheckbox('numero8_16', 1)"><label for="num16_1"></label></td>
+                                <td><input type="checkbox" id="num16_2" name="numero8_16" value="2" onclick="deseleccionarCheckbox('numero8_16', 2)"><label for="num16_2"></label></td>
+                            </tr><tr>
+                                <th>¿Intentas utilizar todos los servicios que están a tu disposicin?&oacute;</th>
+                                <td><input type="checkbox" id="num17_1" name="numero8_17" value="1" onclick="deseleccionarCheckbox('numero8_17', 1)"><label for="num17_1"></label></td>
+                                <td><input type="checkbox" id="num17_2" name="numero8_17" value="2" onclick="deseleccionarCheckbox('numero8_17', 2)"><label for="num17_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de solucionar tus problemas de estudio y aprendizaje en general?</th>
+                                <td><input type="checkbox" id="num18_1" name="numero8_18" value="1" onclick="deseleccionarCheckbox('numero8_18', 1)"><label for="num18_1"></label></td>
+                                <td><input type="checkbox" id="num18_2" name="numero8_18" value="2" onclick="deseleccionarCheckbox('numero8_18', 2)"><label for="num18_2"></label></td>
+                            </tr><tr>
+                                <th>¿Consideras que cualquier actividad mientras estudias puede influir en tu rendimiento?</th>
+                                <td><input type="checkbox" id="num19_1" name="numero8_19" value="1" onclick="deseleccionarCheckbox('numero8_19', 1)"><label for="num19_1"></label></td>
+                                <td><input type="checkbox" id="num19_2" name="numero8_19" value="2" onclick="deseleccionarCheckbox('numero8_19', 2)"><label for="num19_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de relacionarte con personas y ambientes de semejantes intereses a tus estudios?</th>
+                                <td><input type="checkbox" id="num20_1" name="numero8_20" value="1" onclick="deseleccionarCheckbox('numero8_20', 1)"><label for="num20_1"></label></td>
+                                <td><input type="checkbox" id="num20_2" name="numero8_20" value="2" onclick="deseleccionarCheckbox('numero8_20', 2)"><label for="num20_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Te interesan los problemas culturales aunque est&eacute;n aparentemente alejados de los que tienes que estudiar?</th>
+                                <td><input type="checkbox" id="num21_1" name="numero8_21" value="1" onclick="deseleccionarCheckbox('numero8_21', 1)"><label for="num21_1"></label></td>
+                                <td><input type="checkbox" id="num21_2" name="numero8_21" value="2" onclick="deseleccionarCheckbox('numero8_21', 2)"><label for="num21_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>A pesar de los muchos alumnos, ¿tratas de relacionarte con los profesores en clase y fuera de ella?</th>
+                                <td><input type="checkbox" id="num22_1" name="numero8_22" value="1" onclick="deseleccionarCheckbox('numero8_22', 1)"><label for="num22_1"></label></td>
+                                <td><input type="checkbox" id="num22_2" name="numero8_22" value="2" onclick="deseleccionarCheckbox('numero8_22', 2)"><label for="num22_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas, adem&aacute;s de estudiar lo explicado, de tener una actitud creativa y cr&iacute;tica?</th>
+                                <td><input type="checkbox" id="num23_1" name="numero8_23" value="1" onclick="deseleccionarCheckbox('numero8_23', 1)"><label for="num23_1"></label></td>
+                                <td><input type="checkbox" id="num23_2" name="numero8_23" value="2" onclick="deseleccionarCheckbox('numero8_23', 2)"><label for="num23_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de relacionarte con profesionales de las &aacute;reas a las que piensas dedicarte en un futuro?</th>
+                                <td><input type="checkbox" id="num24_1" name="numero8_24" value="1" onclick="deseleccionarCheckbox('numero8_24', 1)"><label for="num24_1"></label></td>
+                                <td><input type="checkbox" id="num24_2" name="numero8_24" value="2" onclick="deseleccionarCheckbox('numero8_24', 2)"><label for="num24_2"></label></td>
+                            </tr><tr>
+                                <th>¿Visitas las exposiciones que tengan relaci&oacute;n con tus estudios?</th>
+                                <td><input type="checkbox" id="num25_1" name="numero8_25" value="1" onclick="deseleccionarCheckbox('numero8_25', 1)"><label for="num25_1"></label></td>
+                                <td><input type="checkbox" id="num25_2" name="numero8_25" value="2" onclick="deseleccionarCheckbox('numero8_25', 2)"><label for="num25_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Tratas de leer revistas y publicaciones en torno a los temas que te interesan en la actualidad?</th>
+                                <td><input type="checkbox" id="num26_1" name="numero8_26" value="1" onclick="deseleccionarCheckbox('numero8_26', 1)"><label for="num26_1"></label></td>
+                                <td><input type="checkbox" id="num26_2" name="numero8_26" value="2" onclick="deseleccionarCheckbox('numero8_26', 2)"><label for="num26_2"></label></td>
+                            </tr><tr>
+                                <th>¿Has buscado informaci&oacute;n en otros lugares respecto a los estudios que te interesan en la actualidad?</th>
+                                <td><input type="checkbox" id="num27_1" name="numero8_27" value="1" onclick="deseleccionarCheckbox('numero8_27', 1)"><label for="num27_1"></label></td>
+                                <td><input type="checkbox" id="num27_2" name="numero8_27" value="2" onclick="deseleccionarCheckbox('numero8_27', 2)"><label for="num27_2"></label></td>
+                            </tr>
+                            <tr>
+                                <th>¿Conoces los planes de estudio de otros centros semejantes a los que estudias?</th>
+                                <td><input type="checkbox" id="num28_1" name="numero8_28" value="1" onclick="deseleccionarCheckbox('numero8_28', 1)"><label for="num28_1"></label></td>
+                                <td><input type="checkbox" id="num28_2" name="numero8_28" value="2" onclick="deseleccionarCheckbox('numero8_28', 2)"><label for="num28_2"></label></td>
+                            </tr><tr>
+                                <th>¿Tratas de relacionarte con otros estudiantes en el extranjero?</th>
+                                <td><input type="checkbox" id="num29_1" name="numero8_29" value="1" onclick="deseleccionarCheckbox('numero8_29', 1)"><label for="num29_1"></label></td>
+                                <td><input type="checkbox" id="num29_2" name="numero8_29" value="2" onclick="deseleccionarCheckbox('numero8_29', 2)"><label for="num29_2"></label></td>
+                            </tr><tr>
+                                <th>¿Has buscando informacion en otros lugares respecto a los estudios que te interesan en</th>
+                                <td><input type="checkbox" id="num30_1" name="numero8_30" value="1" onclick="deseleccionarCheckbox('numero8_30', 1)"><label for="num30_1"></label></td>
+                                <td><input type="checkbox" id="num30_2" name="numero8_30" value="2" onclick="deseleccionarCheckbox('numero8_30', 2)"><label for="num30_2"></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </form>
+                
+                <!--resultados-->
+                <p>Mediante la comparaci&oacute;n de tus resultados con la puntuación ideal, podr&aacute;s valorar la distancia entre lo<br> que deber&iacute;as hacer, y lo que realmente haces cuando te enfrentas al estudio diario. Para mejorar tus<br> resultados debes reflexionar sobre aquellos &iacute;tems en los que la puntuaci&oacute;n obtenida ha sido 0, y elaborar<br> una lista de actuaciones que te ayudar&aacute;n a alcanzar tus objetivos.</p>
+                <table border="1">
+                    <thead>
+                        <!-- los elemntos rospawn y colspan combinan el numero -->
+                        <!-- especificado de cleda en sentido vertical u horizontal -->
+                        <tr>
+                            <!-- combina cuatro columnas -->
+                            <th colspan="3">
+                                <strong>RESULTADO</strong>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th> </th>
+                            <th><strong>REAL</strong></th>
+                            <th><strong>IDEAL</strong></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <th colspan="2"> </th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <th><strong>I. FACTORES AMBIENTALES</strong></th>
+                            <td><label> <div id="resultado"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>II SALUD F&Iacute;SICA Y EMOCIONAL</strong></th>
+                            <td><label><div id="resultado2"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input2"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>III. ASPECTOS SOBRE EL M&Eacute;TODO DE ESTUDIO</strong></th>
+                            <td><label> <div id="resultado3"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input3"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>IV. ORGANIZACI&Oacute;N DE PLANES Y HORARIOS</strong></th>
+                            <td><label> <div id="resultado4"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input4"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr><tr>
+                            <th><strong>V. REALIZACI&Oacute;N DE EX&Aacute;MENES</strong></th>
+                            <td><label> <div id="resultado5"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input5"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>VI. B&Uacute;SQUEDA DE INFORMACI&Oacute;N</strong></th>
+                            <td><label> <div id="resultado6"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input6"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr><tr>
+                            <th><strong>VII. COMUNICACI&Oacute;N ACAD&Eacute;MICA ORAL Y ESCRITA</strong></th>
+                            <td><label> <div id="resultado7"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input7"></label></td>
+                            <td><label> <p>10</p> </label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>VIII. ACERCA DE LA MOTIVACI&Oacute;N PARA APRENDER</strong></th>
+                            <td><label> <div id="resultado8"></div>
+                                <input type="hidden" name="suma" value="" id="suma_input8"></label></td>
+                            <td><label> <p>30</p> </label></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--resultados2-->
+                <p>Como ejercicio personal elabora un enunciado de importancia para ti que contribuya a la facilitación de tu<br> aprendizaje y que no est&eacute; incluido en este cuestionario. En el apartado VIII deber&aacute;s incluir tres<br> enunciados</p>
+                <table border="1">
+                    <thead>
+                        <!-- los elemntos rospawn y colspan combinan el numero -->
+                        <!-- especificado de cleda en sentido vertical u horizontal -->
+                        <tr>
+                            <!-- combina cuatro columnas -->
+                            <th colspan="3">
+                                <strong>RESULTADOS</strong>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th> </th>
+                            <th><strong>S&Iacute;</strong></th>
+                            <th><strong>NO</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><strong>I. FACTORES AMBIENTALES</strong></th>
+                            <td><input type="checkbox" id="num1_1" name="numero9_1" value="1" onclick="deseleccionarCheckbox('numero9_1', 1)"><label for="num1_1"></label></td>
+                            <td><input type="checkbox" id="num1_2" name="numero9_1" value="2" onclick="deseleccionarCheckbox('numero9_1', 2)"><label for="num1_2"></label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>II SALUD FS&Iacute;ICA Y EMOCIONAL</strong></th>
+                            <td><input type="checkbox" id="num2_1" name="numero9_2" value="1" onclick="deseleccionarCheckbox('numero9_2', 1)"><label for="num2_1"></label></td>
+                            <td><input type="checkbox" id="num2_2" name="numero9_2" value="2" onclick="deseleccionarCheckbox('numero9_2', 2)"><label for="num2_2"></label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>III. ASPECTOS SOBRE EL M&Eacute;TODO DE ESTUDIO</strong></th>
+                            <td><input type="checkbox" id="num3_1" name="numero9_3" value="1" onclick="deseleccionarCheckbox('numero9_3', 1)"><label for="num3_1"></label></td>
+                            <td><input type="checkbox" id="num3_2" name="numero9_3" value="2" onclick="deseleccionarCheckbox('numero9_3', 2)"><label for="num3_2"></label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>IV. ORGANIZACI&Oacute;N DE PLANES Y HORARIOS</strong></th>
+                            <td><input type="checkbox" id="num4_1" name="numero9_4" value="1" onclick="deseleccionarCheckbox('numero9_4', 1)"><label for="num4_1"></label></td>
+                            <td><input type="checkbox" id="num4_2" name="numero9_4" value="2" onclick="deseleccionarCheckbox('numero9_4', 2)"><label for="num4_2"></label></td>
+                        </tr><tr>
+                            <th><strong>V. REALIZACI&Oacute;N DE EX&Aacute;MENES</strong></th>
+                            <td><input type="checkbox" id="num5_1" name="numero9_5" value="1" onclick="deseleccionarCheckbox('numero9_5', 1)"><label for="num5_1"></label></td>
+                            <td><input type="checkbox" id="num5_2" name="numero9_5" value="2" onclick="deseleccionarCheckbox('numero9_5', 2)"><label for="num5_2"></label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>VI. B&Uacute;SQUEDA DE INFORMACI&Oacute;N</strong></th>
+                            <td><input type="checkbox" id="num6_1" name="numero9_6" value="1" onclick="deseleccionarCheckbox('numero9_6', 1)"><label for="num6_1"></label></td>
+                            <td><input type="checkbox" id="num6_2" name="numero9_6" value="2" onclick="deseleccionarCheckbox('numero9_6', 2)"><label for="num6_2"></label></td>
+                        </tr><tr>
+                            <th><strong>VII. COMUNICACI&Oacute;N ACAD&Eacute;MICA ORAL Y ESCRITA</strong></th>
+                            <td><input type="checkbox" id="num7_1" name="numero9_7" value="1" onclick="deseleccionarCheckbox('numero9_7', 1)"><label for="num7_1"></label></td>
+                            <td><input type="checkbox" id="num7_2" name="numero9_7" value="2" onclick="deseleccionarCheckbox('numero9_7', 2)"><label for="num7_2"></label></td>
+                        </tr>
+                        <tr>
+                            <th><strong>VIII. ACERCA DE LA MOTIVACI&Oacute;N PARA APRENDER</strong></th>
+                            <td><input type="checkbox" id="num8_1" name="numero9_8" value="1" onclick="deseleccionarCheckbox('numero9_8', 1)"><label for="num8_1"></label></td>
+                            <td><input type="checkbox" id="num8_2" name="numero9_8" value="2" onclick="deseleccionarCheckbox('numero9_8', 2)"><label for="num8_2"></label></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+    </body>
+</html>

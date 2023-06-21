@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Cuestionario CHASIDE</title>
+        <script src="funcionres.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+          span{
+            display: flex;
+        }
+
+        header{
+            border: solid rgb(0, 0, 0);
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 30%;
+        }
+
+        center{
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+        .titulo{
+            
+             font-size: 40px;
+             
+             font-family:"Calibri", sans-serif;
+            font-weight: bold;
+          
+                        
+        } 
+        .texto{
+             color: rgb(0, 0, 0);
+             font-family:"Calibri", sans-serif;
+
+        }
+        table{
+            table-layout: auto;
+            width: 30%;
+            border-collapse: collapse;
+            border: 2px solid black;
+            
+        }
+       th{
+        background-color: rgb(255, 255, 255);
+            width: 20%;
+            border: 1px solid black;
+            padding: 10px;
+       }
+        td {
+            width: 10%;
+            font-family: "Comic Sans MS", "Comic Sans";
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .num{
+          color: rgb(0, 0, 0);
+          text-align: center;
+          font-family: "Comic Sans MS", "Comic Sans";
+          font-weight: bold;
+       }
+        /* The container */
+        .container {
+          display: block;
+          position: relative;
+          padding-left: 25px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          font-size: 20px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          background-color: rgb(255, 255, 255);
+        }
+                        
+                                
+        </style>
+    </head>
+    <body onload="resultadoPag()">
+        <span>
+            <header>
+                <p class="titulo">Test vocacional </p>
+               
+            </header>
+        </span>
+        <span>
+            <center>
+
+    <h3>Resultado final aptitudes:</h3>
+    
+    <label id="puntaje1"></label>
+    
+    <form action="Registrar.php" name="reg" method="post">
+      <label id="ganador1"></label>
+<table>
+  <tr>
+    <td id="aptitud"></td>
+  </tr>
+  <tr>
+    <td><a id="ap"></a></td>
+  </tr>
+</table>
+<h3>Resultado final Interes:</h3>
+<label id="ganador"></label>
+<label id="puntaje"></label>
+<table>
+  <tr>
+  <td id="interes"></td>
+  </tr>
+  <tr>
+    <td><a id="in"></a></td>
+  </tr>
+  
+ 
+     
+  
+   
+ 
+  </table>
+  <p id="Finalizar"></p>
+  </form>
+  <form action="Consulta.php">
+    <p id="cons"></p>
+</form>
+</center>
+</span>
+</body>
+</html>
